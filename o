@@ -1,0 +1,13 @@
+        case .rotate(let gestureState):
+            newState = onRotate(gestureState, in: newState)
+        }
+        
+        return newState
+        
+    }
+    
+    private mutating func onTranslate(_ gestureState: GestureType.GestureState<CGPoint>,
+                                      in state: AppState) -> AppState {
+        
+        var newState = state
+        switch state.editMode {
